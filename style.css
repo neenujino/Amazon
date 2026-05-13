@@ -1,0 +1,264 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaeded;
+  color: #111;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   AMAZON NAVBAR
+========================= */
+.amazon-navbar {
+  background-color: #131921;
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Search Box */
+.search-input {
+  border: none;
+  border-radius: 6px 0 0 6px;
+  padding: 10px 15px;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.search-btn {
+  background-color: #febd69;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  padding: 0 20px;
+}
+
+.search-btn:hover {
+  background-color: #f3a847;
+}
+
+/* =========================
+   NAV ITEMS
+========================= */
+.nav-item {
+  margin: 0 8px;
+}
+
+.nav-item .nav-link {
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-item .nav-link:hover {
+  border: 1px solid #ffffff;
+  color: #ffffff !important;
+}
+
+.nav-item .nav-link.active {
+  border: 1px solid #ffffff;
+}
+
+/* Cart Badge */
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: -6px;
+  background: orange;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   SECONDARY NAV
+========================= */
+.secondary-nav {
+  background-color: #232f3e;
+}
+
+.secondary-nav span {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.secondary-nav span:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero-section {
+  height: 450px;
+  background: url('images/banner.jpg')
+    center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* =========================
+   PRODUCT CARDS
+========================= */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.product-card .card-body {
+  padding: 20px;
+}
+
+.product-card h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background-color: #131a22;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .hero-section {
+    height: 350px;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .nav-item {
+    margin: 4px 0;
+    width: 100%;
+  }
+
+  .nav-item .nav-link {
+    display: block;
+    padding: 10px 15px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 280px;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+  .hero-section {
+    height: 220px;
+  }
+
+  .hero-text {
+    font-size: 0.85rem;
+  }
+
+  .search-btn {
+    padding: 0 15px;
+  }
+
+  .product-card img {
+    height: 160px;
+  }
+
+  .navbar-brand {
+    font-size: 24px;
+  }
+
+  .secondary-nav {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .secondary-nav .container-fluid {
+    flex-wrap: nowrap !important;
+  }
+}
